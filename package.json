@@ -1,0 +1,25 @@
+{
+  "name": "javascript-exercises",
+  "version": "1.0.0",
+  "description": "A repo to centralize some interesting exercises using javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/league-of-developers/javascript-exercises.git"
+  },
+  "keywords": [
+    "javascript",
+    "exercises",
+    "learning",
+    "mocha"
+  ],
+  "author": "Juliano Lima",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/league-of-developers/javascript-exercises/issues"
+  },
+  "homepage": "https://github.com/league-of-developers/javascript-exercises#readme"
+}
