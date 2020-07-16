@@ -4,7 +4,7 @@
   "description": "A repo to centralize some interesting exercises using javascript",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/league-of-developers/javascript-exercises/issues"
   },
-  "homepage": "https://github.com/league-of-developers/javascript-exercises#readme"
+  "homepage": "https://github.com/league-of-developers/javascript-exercises#readme",
+  "devDependencies": {
+    "mocha": "^8.0.1"
+  }
 }
