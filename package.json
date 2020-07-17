@@ -24,6 +24,7 @@
   "homepage": "https://github.com/league-of-developers/javascript-exercises#readme",
   "devDependencies": {
     "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
     "mocha": "^8.0.1"
   }
 }
