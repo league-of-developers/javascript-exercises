@@ -24,7 +24,7 @@ jobs:
           command: yarn test
       - run:
           name: code-coverage
-          command: yarn check-coverage
+          command: yarn check-coverage --collectCoverage=true
       - store_artifacts:
           path: test-results.xml
           prefix: tests
