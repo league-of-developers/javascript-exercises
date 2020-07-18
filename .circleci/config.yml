@@ -24,24 +24,24 @@ jobs:
             # Download and cache dependencies
             - restore_cache:
                 keys:
-                    - v1-dependencies-{{ checksum "package-lock.json" }}
+                    - v1-dependencies-{{ checksum "yarn.lock" }}
                     # fallback to using the latest cache if no exact match is found
                     - v1-dependencies-
 
-            - run: npm install
+            - run: yarn install
 
-            - run: npm install mocha-junit-reporter # just for CircleCI
+            - run: yarn add mocha-junit-reporter # just for CircleCI
 
             - save_cache:
                 paths:
                     - node_modules
-                key: v1-dependencies-{{ checksum "package-lock.json" }}
+                key: v1-dependencies-{{ checksum "yarn.lock" }}
 
             - run: mkdir reports
 
             # Run mocha
             - run:
-                name: npm test
+                name: yarn test
                 command: ./node_modules/.bin/nyc ./node_modules/.bin/mocha --recursive --timeout=10000 --exit --reporter mocha-junit-reporter --reporter-options mochaFile=reports/mocha/test-results.xml
                 when: always
 
