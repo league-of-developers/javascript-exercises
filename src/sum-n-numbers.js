@@ -1,12 +1,13 @@
-const arraySum = require("./sum-array-exercise")
+const solveExpressionOfNaturalNumbersUntilN = ({ number }) => {
+  if (number < 0) {
+    throw new Error('number must be positive');
+  }
 
-const solveExpressionOfNaturalNumbersUntilN = ({number}) => {
+  if (number === 1) {
+    return 1;
+  }
 
-    let sum = 1;
-    
-    for (let i = 0; i < number; i += 1) {
-        sum 
-    }
+  return number + solveExpressionOfNaturalNumbersUntilN({ number: number - 1 });
+};
 
-    return sum;
-}
+module.exports = solveExpressionOfNaturalNumbersUntilN;
