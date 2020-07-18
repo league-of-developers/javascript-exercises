@@ -7,6 +7,14 @@
     "test": "mocha",
     "pretest": "eslint --ignore-path .gitignore ."
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn pretest"
+    }
+  },
+  "lint-staged": {
+    "*.js": ["./node_modules/.bin/eslint — fix", "git add"]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/league-of-developers/javascript-exercises.git"
@@ -28,6 +36,8 @@
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "mocha": "^8.0.1"
   }
 }
