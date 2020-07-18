@@ -8,10 +8,6 @@ jobs:
             - image: circleci/node:10.12
               environment:
                 MONGODB_URI: mongodb://admin:password@localhost:27017/db?authSource=admin
-            - image: mongo:4.0
-              environment:
-                MONGO_INITDB_ROOT_USERNAME: admin
-                MONGO_INITDB_ROOT_PASSWORD: password
         working_directory: ~/repo
         steps:
             - checkout
