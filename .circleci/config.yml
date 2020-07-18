@@ -5,7 +5,7 @@ jobs:
             CC_TEST_REPORTER_ID: c7712c42802f73e06c14606338e063e49ee53682ad79691b016b45cf387873b3
             NODE_ENV: development
         docker:
-            - image: circleci/node:8
+            - image: circleci/node:10.12
               environment:
                 MONGODB_URI: mongodb://admin:password@localhost:27017/db?authSource=admin
             - image: mongo:4.0
