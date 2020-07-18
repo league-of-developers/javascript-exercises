@@ -13,8 +13,8 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "yarn.lock" }}
       - run:
-          name: install-npm-wee
-          command: yarb install
+          name: install-yarn
+          command: yarn install
       - save_cache:
           key: dependency-cache-{{ checksum "yarn.lock" }}
           paths:
