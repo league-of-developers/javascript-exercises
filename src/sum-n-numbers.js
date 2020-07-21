@@ -1,13 +1,13 @@
 const solveExpressionOfNaturalNumbersUntilN = ({ number }) => {
-  let sum = 0;
   if (number < 0) {
     throw new Error('number must be positive');
   }
-  for (let i = 1; i <= number; i += 1) {
-    sum += i;
+
+  if (number === 1) {
+    return 1;
   }
 
-  return sum;
+  return number + solveExpressionOfNaturalNumbersUntilN({ number: number - 1 });
 };
 
 module.exports = solveExpressionOfNaturalNumbersUntilN;
