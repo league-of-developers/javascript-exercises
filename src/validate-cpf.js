@@ -1,8 +1,6 @@
 const calculateCheckers = ({ cpf }) => {
   let sum = 0;
 
-  console.log(cpf);
-
   for (let j = 0; j < cpf.length; j += 1) {
     sum += cpf[j] * ((cpf.length + 1) - j);
   }
